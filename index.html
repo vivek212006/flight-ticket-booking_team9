@@ -323,4 +323,70 @@ body {
             to { transform: rotate(360deg); }
         }
 
+ @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
 
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .auth-buttons {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .search-form {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .trip-type {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
