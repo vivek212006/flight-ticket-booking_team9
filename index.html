@@ -502,3 +502,43 @@ body {
             mobileToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
+	document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Trip type functionality
+        const tripTypeInputs = document.querySelectorAll('input[name="tripType"]');
+        const returnGroup = document.getElementById('returnGroup');
+
+        tripTypeInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.value === 'oneway') {
+                    returnGroup.style.display = 'none';
+                    document.getElementById('return').removeAttribute('required');
+                } else {
+                    returnGroup.style.display = 'block';
+                    if (input.value === 'roundtrip') {
+                        document.getElementById('return').setAttribute('required', 'required');
+                    }
+                }
+            });
+        });
+
+        // Form submission with loading animation
+        const searchForm = document.getElementById('flightSearchForm');
+        const searchBtn = document.querySelector('.search-btn');
+
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            searchBtn.classList.add('loading');
+            const originalText = searchBtn.innerHTML;
+            searchBtn.innerHTML = '<i class="fas fa-spinner"></i> Searching Flights...';
+            setTimeout(() => {
+                searchBtn.classList.remove('loading');
+                searchBtn.innerHTML = originalText;
+                alert('Flight search feature coming soon! This is a demo.');
+            }, 2000);
+        });
