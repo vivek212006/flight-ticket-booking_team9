@@ -462,4 +462,43 @@ body {
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                 </div>
+<div class="form-row">
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5">5+ Passengers</option>
+                        </select>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class" name="class" required>
+                            <option value="economy">Economy</option>
+                            <option value="premium">Premium Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first">First Class</option>
+                        </select>
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+                
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i> Search Flights
+                </button>
+            </form>
+        </div>
+    </section>
 
+    <script>
+        // Mobile menu toggle functionality
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
