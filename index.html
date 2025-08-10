@@ -113,4 +113,18 @@ logo:hover {
 .nav-menu li a.active {
     color: #2563eb;
 }
+nav-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #2563eb, #7c3aed);
+    transition: width 0.3s ease;
+}
 
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    width: 100%;
+}
