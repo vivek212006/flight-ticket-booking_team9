@@ -1,6 +1,7 @@
 # SkyWings Airlines Website
 
 A modern, responsive airline booking website with an elegant design and smooth user experience. Built with pure HTML, CSS, and JavaScript.
+<img width="1470" height="981" alt="image" src="https://github.com/user-attachments/assets/3133fd3e-f19e-4393-a511-206a10320f82" />
 
 ## 🚀 Features
 
